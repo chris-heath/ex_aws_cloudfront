@@ -17,7 +17,7 @@ if Code.ensure_loaded?(SweetXml) do
             quantity: ~x"./Quantity/text()"i
           ],
           alias_icp_recordals: [
-            ~x"./AliasICPRecordals"o,
+            ~x"./AliasICPRecordals"l,
             cname: ~x"./AliasICPRecordal/CNAME/text()"s,
             icp_recordal_status: ~x"./AliasICPRecordal/ICPRecordalStatus/text()"s
           ],
