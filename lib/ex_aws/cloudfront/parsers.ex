@@ -229,7 +229,7 @@ if Code.ensure_loaded?(SweetXml) do
           enabled: ~x"./Enabled/text()"s |> to_boolean,
           http_version: ~x"./HttpVersion/text()"s,
           id: ~x"./Id/text()"s,
-          is_ipv6_enaboled: ~x"./IsIPV6Enabled/text()"s |> to_boolean,
+          is_ipv6_enabled: ~x"./IsIPV6Enabled/text()"s |> to_boolean,
           last_modified_time: ~x"./LastModifiedTime/text()"s,
           origin_groups: [
             ~x"./OriginGroups"o,
