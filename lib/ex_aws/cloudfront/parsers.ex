@@ -12,7 +12,7 @@ if Code.ensure_loaded?(SweetXml) do
           aliases: [
             ~x"./Aliases"o,
             items: [
-              ~x"./Items/CNAME/text()"l
+              ~x"./Items/CNAME/text()"sl
             ],
             quantity: ~x"./Quantity/text()"i
           ],
@@ -31,12 +31,12 @@ if Code.ensure_loaded?(SweetXml) do
                 cached_methods: [
                   ~x"./CachedMethods"o,
                   items: [
-                    ~x"./Items/Method/text()"l
+                    ~x"./Items/Method/text()"sl
                   ],
                   quantity: ~x"./Quantity/text()"i
                 ],
                 items: [
-                  ~x"./Items/Method/text()"l
+                  ~x"./Items/Method/text()"sl
                 ],
                 quantity: ~x"./Quantity/text()"i
               ],
@@ -52,7 +52,7 @@ if Code.ensure_loaded?(SweetXml) do
                   whitelisted_names: [
                     ~x"./WhitelistedNames"o,
                     items: [
-                      ~x"./Items/Name/text()"l
+                      ~x"./Items/Name/text()"sl
                     ],
                     quantity: ~x"./Quantity/text()"i
                   ]
@@ -60,7 +60,7 @@ if Code.ensure_loaded?(SweetXml) do
                 headers: [
                   ~x"./Headers"o,
                   items: [
-                    ~x"./Items/Name/text()"l
+                    ~x"./Items/Name/text()"sl
                   ],
                   quantity: ~x"./Quantity/text()"i
                 ],
@@ -68,7 +68,7 @@ if Code.ensure_loaded?(SweetXml) do
                 query_string_cache_keys: [
                   ~x"./QueryStringCacheKeys"o,
                   items: [
-                    ~x"./Items/Name/text()"l
+                    ~x"./Items/Name/text()"sl
                   ],
                   quantity: ~x"./Quantity/text()"i
                 ]
@@ -84,13 +84,13 @@ if Code.ensure_loaded?(SweetXml) do
               ],
               lambda_function_associations: [
                 ~x"./LambdaFunctionAssociations"o,
-                quantity: ~x"./Quantity/text()"i,
                 items: [
                   ~x"./Items/LambdaFunctionAssociation"l,
                   event_type: ~x"./EventType/text()"s,
                   include_body: ~x"./IncludeBody/text()"s |> to_boolean,
                   lambda_function_arn: ~x"./LambdaFunctionARN/text()"s
-                ]
+                ],
+                quantity: ~x"./Quantity/text()"i
               ],
               max_ttl: ~x"./MaxTTL/text()"i,
               min_ttl: ~x"./MinTTL/text()"i,
@@ -104,7 +104,7 @@ if Code.ensure_loaded?(SweetXml) do
                 ~x"./TrustedKeyGroups"o,
                 enabled: ~x"./Enabled/text()"s |> to_boolean,
                 items: [
-                  ~x"./Items/KeyGroup/text()"l
+                  ~x"./Items/KeyGroup/text()"sl
                 ],
                 quantity: ~x"./Quantity/text()"i
               ],
@@ -112,7 +112,7 @@ if Code.ensure_loaded?(SweetXml) do
                 ~x"./TrustedSigners"o,
                 enabled: ~x"./Enabled/text()"s |> to_boolean,
                 items: [
-                  ~x"./Items/AwsAccountNumber/text()"l
+                  ~x"./Items/AwsAccountNumber/text()"sl
                 ],
                 quantity: ~x"./Quantity/text()"i
               ],
@@ -139,12 +139,12 @@ if Code.ensure_loaded?(SweetXml) do
               cached_methods: [
                 ~x"./CachedMethods"o,
                 items: [
-                  ~x"./Items/Method/text()"l
+                  ~x"./Items/Method/text()"sl
                 ],
                 quantity: ~x"./Quantity/text()"i
               ],
               items: [
-                ~x"./Items/Method/text()"l
+                ~x"./Items/Method/text()"sl
               ],
               quantity: ~x"./Quantity/text()"i
             ],
@@ -160,7 +160,7 @@ if Code.ensure_loaded?(SweetXml) do
                 whitelisted_names: [
                   ~x"./WhitelistedNames"o,
                   items: [
-                    ~x"./Items/Name/text()"l
+                    ~x"./Items/Name/text()"sl
                   ],
                   quantity: ~x"./Quantity/text()"i
                 ]
@@ -168,7 +168,7 @@ if Code.ensure_loaded?(SweetXml) do
               headers: [
                 ~x"./Headers"o,
                 items: [
-                  ~x"./Items/Name/text()"l
+                  ~x"./Items/Name/text()"sl
                 ],
                 quantity: ~x"./Quantity/text()"i
               ],
@@ -176,7 +176,7 @@ if Code.ensure_loaded?(SweetXml) do
               query_string_cache_keys: [
                 ~x"./QueryStringCacheKeys"o,
                 items: [
-                  ~x"./Items/Name/text()"l
+                  ~x"./Items/Name/text()"sl
                 ],
                 quantity: ~x"./Quantity/text()"i
               ]
@@ -211,7 +211,7 @@ if Code.ensure_loaded?(SweetXml) do
               ~x"./TrustedKeyGroups"o,
               enabled: ~x"./Enabled/text()"s |> to_boolean,
               items: [
-                ~x"./Items/KeyGroup/text()"l
+                ~x"./Items/KeyGroup/text()"sl
               ],
               quantity: ~x"./Quantity/text()"i
             ],
@@ -219,7 +219,7 @@ if Code.ensure_loaded?(SweetXml) do
               ~x"./TrustedSigners"o,
               enabled: ~x"./Enabled/text()"s |> to_boolean,
               items: [
-                ~x"./Items/AwsAccountNumber/text()"l
+                ~x"./Items/AwsAccountNumber/text()"sl
               ],
               quantity: ~x"./Quantity/text()"i
             ],
@@ -240,7 +240,7 @@ if Code.ensure_loaded?(SweetXml) do
                 status_codes: [
                   ~x"./StatusCodes"o,
                   items: [
-                    ~x"./Items/StatusCode/text()"l
+                    ~x"./Items/StatusCode/text()"sl
                   ],
                   quantity: ~x"./Quantity/text()"i
                 ]
@@ -249,7 +249,7 @@ if Code.ensure_loaded?(SweetXml) do
               members: [
                 ~x"./Members"o,
                 items: [
-                  ~x"./Items/OriginGroupMember/OriginId/text()"l
+                  ~x"./Items/OriginGroupMember/OriginId/text()"sl
                 ],
                 quantity: ~x"./Quantity/text()"i
               ]
@@ -281,7 +281,7 @@ if Code.ensure_loaded?(SweetXml) do
                 origin_ssl_protocols: [
                   ~x"./OriginSslProtocols"o,
                   items: [
-                    ~x"./Items/SslProtocol/text()"l
+                    ~x"./Items/SslProtocol/text()"sl
                   ],
                   quantity: ~x"./Quantity/text()"i
                 ]
@@ -307,7 +307,7 @@ if Code.ensure_loaded?(SweetXml) do
             geo_restriction: [
               ~x"./GeoRestriction"o,
               items: [
-                ~x"./Items/Location/text()"l
+                ~x"./Items/Location/text()"sl
               ],
               quantity: ~x"./Quantity/text()"i,
               restriction_type: ~x"./RestrictionType/text()"s
