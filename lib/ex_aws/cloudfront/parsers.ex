@@ -42,7 +42,7 @@ if Code.ensure_loaded?(SweetXml) do
               ],
               cache_policy_id: ~x"./CachePolicyId/text()"s,
               compress: ~x"./Compress/text()"s |> to_boolean,
-              default_ttl: ~x"./DefaultTTL/text()"i,
+              default_ttl: ~x"./DefaultTTL/text()"io,
               field_level_encyrption_id: ~x"./FieldLevelEncryptionId/text()"s,
               forwarded_values: [
                 ~x"./ForwardedValues"o,
@@ -92,8 +92,8 @@ if Code.ensure_loaded?(SweetXml) do
                 ],
                 quantity: ~x"./Quantity/text()"i
               ],
-              max_ttl: ~x"./MaxTTL/text()"i,
-              min_ttl: ~x"./MinTTL/text()"i,
+              max_ttl: ~x"./MaxTTL/text()"io,
+              min_ttl: ~x"./MinTTL/text()"io,
               origin_request_policy_id: ~x"./OriginRequestPolicyId/text()"s,
               path_pattern: ~x"./PathPattern/text()"s,
               realtime_log_config_arn: ~x"./RealtimeLogConfigArn/text()"s,
@@ -125,7 +125,7 @@ if Code.ensure_loaded?(SweetXml) do
             ~x"./CustomErrorResponses"o,
             items: [
               ~x"./Items/CustomErrorResponse"l,
-              error_caching_min_ttl: ~x"./ErrorCachingMinTTL/text()"i,
+              error_caching_min_ttl: ~x"./ErrorCachingMinTTL/text()"io,
               error_code: ~x"./ErrorCode/text()"i,
               response_code: ~x"./ResponseCode/text()"s,
               response_page_path: ~x"./ResponsePagePath/text()"s
@@ -150,7 +150,7 @@ if Code.ensure_loaded?(SweetXml) do
             ],
             cache_policy_id: ~x"./CachePolicyId/text()"s,
             compress: ~x"./Compress/text()"s |> to_boolean,
-            default_ttl: ~x"./DefaultTTL/text()"i,
+            default_ttl: ~x"./DefaultTTL/text()"io,
             field_level_encryption_id: ~x"./FieldLevelEncryptionId/text()"s,
             forwarded_values: [
               ~x"./ForwardedValues"o,
@@ -200,8 +200,8 @@ if Code.ensure_loaded?(SweetXml) do
               ],
               quantity: ~x"./Quantity/text()"i
             ],
-            max_ttl: ~x"./MaxTTL/text()"i,
-            min_ttl: ~x"./MinTTL/text()"i,
+            max_ttl: ~x"./MaxTTL/text()"io,
+            min_ttl: ~x"./MinTTL/text()"io,
             origin_request_policy_id: ~x"./OriginRequestPolicyId/text()"s,
             realtime_log_config_arn: ~x"./RealtimeLogConfigArn/text()"s,
             response_headers_policy_id: ~x"./ResponseHeadersPolicyId/text()"s,
