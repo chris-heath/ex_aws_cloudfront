@@ -26,7 +26,7 @@ defmodule ExAwsCloudfront.MixProject do
       {:sweet_xml, ">= 0.6.5", only: [:dev, :test]},
       {:poison, ">= 0.0.0", only: [:dev, :test]},
       {:xml_builder, ">= 0.0.0"},
-      {:ex_aws, "~> 2.1.1"}
+      {:ex_aws, "~> 2.4"}
     ]
   end
 end
